@@ -1,0 +1,98 @@
+@mixin dots($count){
+    $text-shadow: ();
+    @for $i from 0 through $count {
+        $text-shadow: $text-shadow,
+        (-0.5 + random() * 5) + em
+        (-0.5 + random() * 2) + em
+        10px
+        hsla(random() * 360, 100%, 50%, 0.9);
+    }
+    text-shadow: $text-shadow;
+}
+
+@keyframes redBox {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
+
+@keyframes backdropGradient{
+    0%{background-position: 0% 50%;}
+    25%{background-position: 50% 100%;}
+    50%{background-position: 100% 50%;}
+    75%{background-position: 50% 0%;}
+    100%{background-position: 0% 50%;}
+}
+
+@keyframes move{
+    from{transform: rotate(0deg) scale(5) translate(-20px);}
+    to{transform: rotate(360deg) scale(20) translate(20px);}
+}
+
+
+
+div#BackDrop, head#BackDrop {
+    display: block;
+    font-size: 52px;
+    color: transparent;
+  }
+  
+  head#BackDrop::before, head#BackDrop::after,
+  div#BackDrop::before, div#BackDrop::after {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 3em;
+    height: 3em;
+    content: '.';
+    mix-blend-mode: screen;
+    animation: 44s -27s move infinite ease-in-out alternate;
+  }
+
+div#BackDrop::before {
+    @include dots(10);
+    animation-duration: 44s;
+    animation-delay: -27s;
+  }
+  
+  div#BackDrop::after  {
+    @include dots(10);
+    animation-duration: 43s;
+    animation-delay: -32s;
+  }
+  
+  head#BackDrop::before  {
+    @include dots(10);
+    animation-duration: 42s;
+    animation-delay: -23s;
+  }
+  
+  head#BackDrop::after  {
+    @include dots(10);
+    animation-duration: 41s;
+    animation-delay: -19s;
+  }
+
+#HomePageHtml, #HomePageBody{
+    background-size: cover;
+}
+
+
+#animationBox{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    animation-name: redBox;
+    animation-duration: 20s;
+}
+
+#HomePageBody{
+    background: linear-gradient(45deg,#ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400%;
+    animation-name: backdropGradient;
+    animation-duration: 20s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+
+
