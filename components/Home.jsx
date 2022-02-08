@@ -8,7 +8,7 @@ import React from 'react';
 
 const Home = () => {
   return (
-    <Box>
+    <Container>
       <Typography variant='h3'>Home</Typography>
       <Typography variant='h3'>Home</Typography>
       <Typography variant='h3'>Home</Typography>
@@ -47,7 +47,7 @@ const Home = () => {
       <Typography variant='h3'>Home</Typography>
       <Typography variant='h3'>Home</Typography>
       <Typography variant='h3'>Home</Typography>
-    </Box>
+    </Container>
   );
 };
 

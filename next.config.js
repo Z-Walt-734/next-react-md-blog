@@ -4,7 +4,6 @@ const withMDX = require('@next/mdx')({
   target: 'serverless',
 });
 
-
 module.exports = {
   withMDX,
   sassOptions: {

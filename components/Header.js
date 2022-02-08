@@ -9,16 +9,16 @@ import { Typography } from '@mui/material';
 
 const grabPhrase = () =>{
   const phrases = [
-    'A Backend Programmer takes on the wild world of frontend design',
+    'A Backend Programmer takes on the wild world of frontend design.',
     'All Code Now With 50% Fewer Calories!',
-    'The Blogiest Blog Blogging in the whole Blog-o-sphere',
+    'The Blogiest Blog Blogging in the whole Blog-o-sphere.',
     '😝 WAAAAASSSSSMMMMMMMMMM!!!!!',
     'If you lived here, you\'d be home by now!',
-    'test 4',
-    'test 5',
-    'test 6',
+    'Back off man, I\'m a {computer} scientist.',
+    'No matter where you go, there you are.',
+    'Konami Code Compatible!',
     'test 7',
-    'test 8',
+    'NOW FULLY OPERATIONAL! We apologize for the inconvenience',
   ];
 
   const n = Math.floor(Math.random() * phrases.length);
@@ -26,7 +26,7 @@ const grabPhrase = () =>{
   return phrases[n];
 };
 
-const Header = () => {
+const MainHeader = () => {
   return (
     <>
       <Box >
@@ -47,4 +47,23 @@ const Header = () => {
   );
 };
 
-export { Header };
+const Header = () => {
+  return (
+    <>
+      <Box >
+
+        <Typography variant='h3' align='center'>
+          ZW&apos;s Project Blog
+        </Typography>
+        <Typography variant='h6' align='center'>
+          {grabPhrase()}
+        </Typography>
+        <Navbar/>
+        <br />
+        <br />
+      </Box>
+    </>
+  );
+};
+
+export { Header, MainHeader };

@@ -38,14 +38,14 @@ const Navbar = (props) => {
             <Typography>About</Typography>
           </Button>
 
-          <Button variant="contained" href="/posts">
-            <Typography>Blogposts</Typography>
+          <Button variant="contained" href="/post">
+            <Typography>Blogpost</Typography>
           </Button>
 
           <Button variant="contained" href="/projects">
             <Typography>Projects</Typography>
           </Button>
-          <Button variant="contained" href="https://github.com" >
+          <Button variant="contained" href="https://github.com/Z-Walt-734" >
             <GitHub color='default' fontSize='medium' />
           </Button>
 

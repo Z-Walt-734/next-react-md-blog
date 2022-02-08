@@ -6,3 +6,5 @@ export * from './BlogPost';
 export * from './About';
 export * from './Home';
 export * from './_theme';
+export * from './renderMarkdown';
+export * from './Projects'

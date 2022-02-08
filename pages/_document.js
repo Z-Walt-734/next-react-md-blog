@@ -1,6 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { React } from 'react';
 import { ServerStyleSheets } from '@mui/styles';
+import { Footer } from '../components';
 
 /**
  * Document class
@@ -51,18 +52,17 @@ export default class MyDocument extends Document {
           <link
             rel="shortcut icon"
             type="image/png"
-            href="../static/favicon.ico"
+            href="../static/images/logo/favicon.png"
           />
           <style>{`body { margin: 0 } /* custom! */`}</style>
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-          />
-        </Head>
+         </Head>
         <body className="custom_class">
           <Main />
           <NextScript />
         </body>
+        <Footer>
+          
+        </Footer>
       </Html>
     );
   }

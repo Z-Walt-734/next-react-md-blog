@@ -1,4 +1,4 @@
-import { Typography } from '@mui/material';
+import { Container, Typography } from '@mui/material';
 import React from 'react';
 // import './styles/custom.scss';
 
@@ -6,15 +6,14 @@ import React from 'react';
 
 // import { store } from './helpers';
 
-const About = () => {
+const Projects = () => {
   return (
     <>
       <Container maxWidth="md">
-      <Typography >About Page</Typography>
+        <Typography >Projects Page</Typography>
       </Container>
-
     </>
   );
 };
 
-export { About };
+export { Projects };

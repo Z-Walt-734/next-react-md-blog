@@ -15,12 +15,19 @@
     to {background-color: yellow;}
 }
 
-@keyframes backdropGradient{
-    0%{background-position: 0% 50%;}
-    25%{background-position: 50% 100%;}
-    50%{background-position: 100% 50%;}
-    75%{background-position: 50% 0%;}
+@keyframes barrelRoll{
+  0%{background-position: 0% 50%; transform: rotate(360deg);}
+    33%{background-position: 50% 0%;}
+    66%{background-position: 100% 50%; }
     100%{background-position: 0% 50%;}
+}
+
+@keyframes backdropGradient{
+    0%{background-position: 0% 50%; }
+    33%{background-position: 50% 0%;}
+    66%{background-position: 100% 50%; }
+    100%{background-position: 0% 50%;}
+    // 100%{background-position: 0% 50%;}
 }
 
 @keyframes move{
@@ -85,13 +92,22 @@ div#BackDrop::before {
     animation-duration: 20s;
 }
 
-#HomePageBody{
-    background: linear-gradient(45deg,#ee7752, #e73c7e, #23a6d5, #23d5ab);
+.HomePageBody{
+    background: linear-gradient(-45deg,#161A22, #4451a3, #161A22);
     background-size: 400%;
     animation-name: backdropGradient;
     animation-duration: 20s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
+}
+
+.SpinningBody{
+  background: linear-gradient(-45deg,#161A22, #4451a3, #161A22);
+  background-size: 400%;
+  animation-name: barrelRoll;
+  animation-duration: 8s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
 }
 
 

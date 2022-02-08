@@ -12,8 +12,9 @@ import {
 } from '@mui/material';
 import { ArrowForwardIosIcon, ArrowBackIosIcon } from '@mui/icons-material';
 import fetch from 'isomorphic-fetch';
-// import { Box } from '@mui/system';
 import styles from './Banner.module.css';
+import RenderMarkdown from './renderMarkdown';
+import {PostCard} from './PostCard';
 // https://api.unsplash.com/photos/?client_id=W7Ea5pCxcUY7tTMwjmbpgORbbv7B_siM1ugKwUnN63M
 // 0:
 // alt_description: "white notebook"
@@ -95,25 +96,21 @@ const Carousel = ({ children }) => {
         <Button variant='contained' onClick={() => {
           updateIndex(activeIndex + 1);
         }}>
-
           <Typography variant='h5'>&gt;</Typography>
-
         </Button>
       </Box>
-
-
     </Box>
   );
 };
 
 
 const Banner = () => {
-  const [posts, setPosts] = useState([]);
+  const [postMetadata, setPostMetadata] = useState([]);
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() =>{
     const fetchPosts = async () => {
-      const res = await fetch('https://api.unsplash.com/photos/?client_id=W7Ea5pCxcUY7tTMwjmbpgORbbv7B_siM1ugKwUnN63M')
+      const res = await fetch('https://a2l3x27rvb.execute-api.us-east-2.amazonaws.com/articles/metadata/202202')
           .then(function(response) {
             if (response.status >=400) {
               throw new Error(
@@ -123,7 +120,7 @@ const Banner = () => {
             return response;
           });
       const data = await res.json();
-      setPosts(data);
+      setPostMetadata(data);
       setLoading(false);
     };
     fetchPosts();
@@ -140,53 +137,14 @@ const Banner = () => {
     <>
       <Container direction='column' style={{ minWidth: 375 }} >
         <Carousel>
-          {posts.map(function(v, i) {
+          {postMetadata.body.map(function(v, i) {
             return (
               <CarouselItem key={i}>
-                <Card raised={true} style={{ minWidth: 1024 }}>
-                  <CardMedia
-                    component='img'
-                    height='200'
-                    image={v.urls.full}
-                    alt={v.description}
-                    style={{ maxHeight: 550 }}
-
-                  />
-                  <CardContent sx={{ bgcolor: 'primary.dark' }}>
-                    <Typography variant='h5'>
-                      {v.description}
-                    </Typography>
-                    <Typography variant='subtitle1'>
-                Posted by: {v.user.first_name}
-                    </Typography>
-                  </CardContent>
-                </Card>
+                <PostCard post={v} />
               </CarouselItem>
             );
           })}
-
-          {/* <Slide direction='right' in={true}>
-          <Card raised={true} sx={{ minWidth: 275 }}>
-            <CardMedia
-              component='img'
-              height='200'
-              image={posts[0].urls.small}
-              alt={posts[0].description}
-            />
-            <CardContent sx={{ bgcolor: 'primary.dark' }}>
-              <Typography variant='h5'>
-                {posts[0].description}
-              </Typography>
-              <Typography variant='subtitle1'>
-                Posted by: {posts[0].user.first_name}
-              </Typography>
-            </CardContent>
-          </Card>
-
-        </Slide> */}
-
         </Carousel>
-
       </Container>
     </>
   );

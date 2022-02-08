@@ -1,5 +1,5 @@
 import React from 'react';
-import {Header} from '../components';
+import {Header, Projects} from '../components';
 import {About} from '../components';
 import { CssBaseline, Paper, ThemeProvider } from '@mui/material';
 import { Box, createTheme } from '@mui/system';
@@ -17,15 +17,11 @@ import { BackDrop } from './styles/HomePage.module.scss';
 function AboutPage() {
   return (
     <>
-
-<ThemeProvider theme={theme}>
-{/* <Paper style={{background: 'green'}}>  */}
-          <CssBaseline />
-          <Header />
-          <About />
-          {/* </Paper> */}
+        <ThemeProvider theme={theme}>
+            <CssBaseline />
+            <Header />
+            <Projects />
         </ThemeProvider>
-        
     </>
   );
 };

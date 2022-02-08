@@ -3,6 +3,7 @@ import { grey } from '@mui/material/colors';
 
 
 const theme = createTheme({
+  
   palette: {
     primary: {
       main: '#546e7a',
@@ -17,9 +18,9 @@ const theme = createTheme({
       contrastText: grey[400],
     },
     background: {
-      default: 'transparent',
-      dark: 'transparent',
-      light: 'transparent',
+      default: 'black',
+      dark: 'black',
+      light: 'black',
     },
     text: {
       primary: '#fafafa',
