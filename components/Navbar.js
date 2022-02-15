@@ -3,26 +3,17 @@ import {
   Button,
   Typography,
   AppBar,
-  useScrollTrigger,
   Divider,
-  styled,
   Stack,
-  CssBaseline,
-  Toolbar,
 } from '@mui/material';
-import PropTypes from 'prop-types';
-import { SearchIcon, HomeIcon, GitHub } from '@mui/icons-material';
-// import reactDom from 'react-dom';
-
-import { theme } from './_theme';
-import { ThemeProvider } from '@mui/material';
+import {GitHub} from '@mui/icons-material';
 
 
 const Navbar = (props) => {
   return (
     <>
       {/* <ThemeProvider theme = {theme}> */}
-      <AppBar position='sticky' sx={{ zIndex: 1500 }}>
+      <AppBar position='sticky' sx={{zIndex: 1500}}>
         <Stack
           spacing={1}
           direction='row'
@@ -38,8 +29,8 @@ const Navbar = (props) => {
             <Typography>About</Typography>
           </Button>
 
-          <Button variant="contained" href="/post">
-            <Typography>Blogpost</Typography>
+          <Button variant="contained" href="/posts">
+            <Typography>Posts by Type</Typography>
           </Button>
 
           <Button variant="contained" href="/projects">
@@ -57,4 +48,4 @@ const Navbar = (props) => {
   );
 };
 
-export { Navbar };
+export {Navbar};

@@ -1,11 +1,8 @@
 import React from 'react';
-import { Navbar } from '.';
-import { Box } from '@mui/material';
-// import {red} from '@mui/material/colors';
-import { Banner } from './Banner';
-import { Typography } from '@mui/material';
-
-// import './styles/custom.scss';
+import {Navbar} from '.';
+import {Box} from '@mui/material';
+import {Banner} from './Banner';
+import {Typography} from '@mui/material';
 
 const grabPhrase = () =>{
   const phrases = [
@@ -17,8 +14,8 @@ const grabPhrase = () =>{
     'Back off man, I\'m a {computer} scientist.',
     'No matter where you go, there you are.',
     'Konami Code Compatible!',
-    'test 7',
-    'NOW FULLY OPERATIONAL! We apologize for the inconvenience',
+    '{Catchphrase, catchphrase}',
+    'NOW FULLY OPERATIONAL! We apologize for the inconvenience this may cause',
   ];
 
   const n = Math.floor(Math.random() * phrases.length);
@@ -66,4 +63,4 @@ const Header = () => {
   );
 };
 
-export { Header, MainHeader };
+export {Header, MainHeader};

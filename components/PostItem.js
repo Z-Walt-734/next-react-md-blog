@@ -4,17 +4,23 @@ const {
   CardMedia,
   CardContent,
   // Button,
-  Box} = require('@mui/material');
+  Box,
+  Button,
+} = require('@mui/material');
 import React from 'react';
 import {renderMarkdown} from './renderMarkdown';
 import {toTitleCase} from '.';
+import styles from './PostItem.module.css';
 import {PropTypes} from 'prop-types';
 
 
-const PostCard =({post, size}) => {
+const PostItem =({post, width}) => {
   return (
-    <>
-      <Card raised={true} style={{minWidth: size}}>
+    <Box
+      className={styles.postItem}
+      style={{width: width, height: '350px'}}
+    >
+      <Card raised={true} style={{minWidth: width}}>
         <CardMedia
           component='img'
           height='200'
@@ -37,19 +43,19 @@ const PostCard =({post, size}) => {
               {__html: renderMarkdown(post.excerpt)}
             }></div>
           </Typography>
-          {/* <Button variant="contained" href={`/post/${post.creationStamp}`}>
-                      <Typography>Read More</Typography>
-                    </Button> */}
+          <Button variant="contained" href={`/post/${post.creationStamp}`}>
+            <Typography>Read More</Typography>
+          </Button>
         </CardContent>
       </Card>
-    </>
+    </Box>
+
   );
 };
 
-PostCard.propTypes = {
+PostItem.propTypes = {
   post: PropTypes.object.isRequired,
-  size: PropTypes.number.isRequired,
+  width: PropTypes.number.isRequired,
 };
 
-
-export {PostCard};
+export {PostItem};

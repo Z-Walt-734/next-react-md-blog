@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Typography } from '@mui/material';
+import {Container, Typography} from '@mui/material';
 import React from 'react';
 // import './styles/custom.scss';
 
@@ -10,45 +10,8 @@ const Home = () => {
   return (
     <Container>
       <Typography variant='h3'>Home</Typography>
-      <Typography variant='h3'>Home</Typography>
-      <Typography variant='h3'>Home</Typography>
-      <Typography variant='h3'>Home</Typography>
-      <Typography variant='h3'>Home</Typography>
-      <Typography variant='h3'>Home</Typography>
-      <Typography variant='h3'>Home</Typography>
-      <Typography variant='h3'>Home</Typography>
-      <Typography variant='h3'>Home</Typography>
-      <Typography variant='h3'>Home</Typography>
-      <Typography variant='h3'>Home</Typography>
-      <Typography variant='h3'>Home</Typography>
-      <Typography variant='h3'>Home</Typography>
-      <Typography variant='h3'>Home</Typography>
-      <Typography variant='h3'>Home</Typography>
-      <Typography variant='h3'>Home</Typography>
-      <Typography variant='h3'>Home</Typography>
-      <Typography variant='h3'>Home</Typography>
-      <Typography variant='h3'>Home</Typography>
-      <Typography variant='h3'>Home</Typography>
-      <Typography variant='h3'>Home</Typography>
-      <Typography variant='h3'>Home</Typography>
-      <Typography variant='h3'>Home</Typography>
-      <Typography variant='h3'>Home</Typography>
-      <Typography variant='h3'>Home</Typography>
-      <Typography variant='h3'>Home</Typography>
-      <Typography variant='h3'>Home</Typography>
-      <Typography variant='h3'>Home</Typography>
-      <Typography variant='h3'>Home</Typography>
-      <Typography variant='h3'>Home</Typography>
-      <Typography variant='h3'>Home</Typography>
-      <Typography variant='h3'>Home</Typography>
-      <Typography variant='h3'>Home</Typography>
-      <Typography variant='h3'>Home</Typography>
-      <Typography variant='h3'>Home</Typography>
-      <Typography variant='h3'>Home</Typography>
-      <Typography variant='h3'>Home</Typography>
-      <Typography variant='h3'>Home</Typography>
     </Container>
   );
 };
 
-export { Home };
+export {Home};

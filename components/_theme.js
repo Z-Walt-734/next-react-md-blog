@@ -1,9 +1,9 @@
-import { createTheme } from '@mui/material/styles';
-import { grey } from '@mui/material/colors';
+import {createTheme} from '@mui/material/styles';
+import {grey} from '@mui/material/colors';
 
 
 const theme = createTheme({
-  
+
   palette: {
     primary: {
       main: '#546e7a',
@@ -29,4 +29,4 @@ const theme = createTheme({
 });
 
 
-export { theme };
+export {theme};

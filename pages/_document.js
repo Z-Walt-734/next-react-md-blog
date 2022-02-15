@@ -1,7 +1,7 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
-import { React } from 'react';
-import { ServerStyleSheets } from '@mui/styles';
-import { Footer } from '../components';
+import Document, {Html, Head, Main, NextScript} from 'next/document';
+import {React} from 'react';
+import {ServerStyleSheets} from '@mui/styles';
+import {Footer} from '../components';
 
 /**
  * Document class
@@ -55,13 +55,13 @@ export default class MyDocument extends Document {
             href="../static/images/logo/favicon.png"
           />
           <style>{`body { margin: 0 } /* custom! */`}</style>
-         </Head>
+        </Head>
         <body className="custom_class">
           <Main />
           <NextScript />
         </body>
         <Footer>
-          
+
         </Footer>
       </Html>
     );

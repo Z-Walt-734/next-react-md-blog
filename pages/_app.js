@@ -1,8 +1,14 @@
-import Head from 'next/head'
+/* eslint-disable max-len */
+import Head from 'next/head';
+import React from 'react';
+import {PropTypes} from 'prop-types';
 // import './styles/styles.css'
 
-
-function MyApp({ Component, pageProps }) {
+/**
+ * Renders components into About page
+ * @return {any}the About page
+ */
+function MyApp({Component, pageProps}) {
   return (
     <>
       <Head>
@@ -14,7 +20,14 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <Component {...pageProps} />
     </>
-  )
+  );
 }
 
-export default MyApp
+MyApp.propTypes = {
+  Component: PropTypes.func,
+  pageProps: PropTypes.object,
+
+};
+
+
+export default MyApp;

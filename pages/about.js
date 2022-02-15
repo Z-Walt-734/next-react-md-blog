@@ -1,13 +1,8 @@
 import React from 'react';
 import {Header} from '../components';
 import {About} from '../components';
-import { CssBaseline, Paper, ThemeProvider } from '@mui/material';
-import { Box, createTheme } from '@mui/system';
-import { Home } from '../components';
-import { theme } from '../components';
-import { deepmerge } from '@mui/utils';
-import { BackDrop } from './styles/HomePage.module.scss';
-
+import {CssBaseline, ThemeProvider} from '@mui/material';
+import {theme} from '../components';
 
 
 /**
@@ -18,14 +13,12 @@ function AboutPage() {
   return (
     <>
 
-<ThemeProvider theme={theme}>
-{/* <Paper style={{background: 'green'}}>  */}
-          <CssBaseline />
-          <Header />
-          <About />
-          {/* </Paper> */}
-        </ThemeProvider>
-        
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Header />
+        <About />
+      </ThemeProvider>
+
     </>
   );
 };
